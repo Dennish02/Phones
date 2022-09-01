@@ -7,6 +7,6 @@ import { detalleCelular } from "../components/detalleCelular.js";
 const router = express.Router();
 
 router.get('/', getBrands)
-router.get('/phones', busquedaMarca)
+router.get('/phones/:slug', busquedaMarca)
 router.get('/phones/detail', detalleCelular)
 export default router

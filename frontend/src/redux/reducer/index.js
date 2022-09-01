@@ -1,15 +1,22 @@
 const initialState = {
-    names :[]
+    names :[],
+    phoneByBrand: []
 }
 
 const rootReducer = (state = initialState, action)=>{
-    switch (action.type){
+    switch (action.type) {
         case 'GET-BRANDS':
-            return{
+            return {
                 ...state,
-                names : action.payload
+                names: action.payload
             }
-        
+        case 'SEARCH_BY_BRAND':
+            console.log(action.payload);
+            return {
+                ...state,
+                namphoneByBrandes: action.payload
+            }
+
         default:
             return state;
     }

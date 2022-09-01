@@ -1,0 +1,22 @@
+@use '../base/variables' as v;
+
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: v.$principal;
+   
+    .logo{
+        font-size: 5rem;
+        font-weight: v.$bold;
+        color: v.$blanco;
+    }
+    .select-navbar{
+        padding: 1rem;
+        border: none;
+       
+    }
+}
