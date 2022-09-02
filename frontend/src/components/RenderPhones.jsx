@@ -1,26 +1,28 @@
 import React from 'react'
+import Phone from './Phone'
 
 
 
 export default function RenderPhones({phones}) {
-  
+  console.log(phones);
   return (
-    <section>
+    <section className='contenedorPhones'>
         
           {
-                        phones.length !== 0 ?
-                            phones.map(e =>(e.map(f=>f.phones.map(r=>{
-                                
-                                return(
-                                    <div>
-                                        <p>{r.phone_name}</p>
-                                        <img src={r.image} width='50%'/>
-                                    </div>
-                                )
-                            }))))
+              phones ?
+                  phones.map(e => (e.map(f => f.phones.map(r => {
 
-                            : 'Cargando...'
-                    }
+                      return (
+                          <Phone 
+                          name={r.phone_name}
+                          img={r.image}
+                          slug={r.slug}
+                          />
+                      )
+                  }))))
+
+                  : 'Cargando...'
+          }
     </section>
   )
 }

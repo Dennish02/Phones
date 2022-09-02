@@ -2,11 +2,13 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { searchByBrand } from '../redux/action';
 
-export default function Navbar({ names }) {
+export default function Navbar({ names, setName }) {
     const dispatch = useDispatch();
-
-
     function handleSelect(e){
+        const eso = e.value; 
+        const data = eso.split('-')[0] 
+        const titulo = data.charAt(0).toUpperCase() + data.slice(1)
+        setName(titulo)
         dispatch(searchByBrand(e.value))
     }
 

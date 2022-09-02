@@ -1,0 +1,9 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.contenedorPhones{
+    max-width: 1200px;
+    margin: 0 auto;
+    @include m.mediaGrid(300px, 2rem);
+}

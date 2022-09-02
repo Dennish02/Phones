@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const detalleCelular = async (req, res)=>{
-    const {slug} = req.body
+    const {slug} = req.params
  
     try {
         let {data} = await axios.get(`http://api-mobilespecs.azharimm.site/v2/${slug}`)

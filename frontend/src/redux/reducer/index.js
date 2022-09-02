@@ -11,7 +11,6 @@ const rootReducer = (state = initialState, action)=>{
                 names: action.payload
             }
         case 'SEARCH_BY_BRAND':
-            console.log(action.payload);
             return {
                 ...state,
                 namphoneByBrandes: action.payload

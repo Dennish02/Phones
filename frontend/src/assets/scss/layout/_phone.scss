@@ -1,0 +1,36 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    background-color: v.$blanco1;
+    height: 450px;
+    .phone-name{
+        margin: 1rem;
+        text-align: center;
+    }
+    .cont-img{
+        height: 300px;
+        .phone-img{ 
+            height: 100%;
+            max-height:fit-content ;
+            margin-bottom: 2rem;
+            width: auto;
+           margin: 0 auto;
+            @supports(object-fit: cover) {
+                img { 
+                    object-fit: cover;
+                }
+            }
+    }
+    }
+    
+    .phone-button{
+        @include m.boton(v.$principal, inline-block)
+    }
+}
+

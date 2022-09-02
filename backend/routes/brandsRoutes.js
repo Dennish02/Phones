@@ -8,5 +8,5 @@ const router = express.Router();
 
 router.get('/', getBrands)
 router.get('/phones/:slug', busquedaMarca)
-router.get('/phones/detail', detalleCelular)
+router.get('/phones/detail/:slug', detalleCelular)
 export default router
