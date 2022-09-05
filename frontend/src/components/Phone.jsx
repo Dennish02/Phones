@@ -1,13 +1,10 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { getPhoneDetail } from '../redux/action';
+
+import { Link } from 'react-router-dom';
+
 
 export default function Phone({name, img, slug}) {
-    const dispatch = useDispatch();
-
-    function handleSlag(){
-        dispatch(getPhoneDetail(slug))
-    }
+   
   return (
       <section className='phone'>
           <div className='phone-content'>
@@ -17,10 +14,10 @@ export default function Phone({name, img, slug}) {
               </div>
               
           </div>
+          <Link to={`/device/${name}/${slug}`}>
           <button
-          onClick={handleSlag}
           className='phone-button'>Ver Detalles</button>
-        
+         </Link>   
       </section>
   )
 }

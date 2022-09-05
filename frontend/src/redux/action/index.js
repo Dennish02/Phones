@@ -34,15 +34,27 @@ const getPhoneDetail =(value)=>{
     return async function(dispatch){
         try {
             let {data} = await axios.get(`http://localhost:3001/brands/phones/detail/${value}`)
-            console.log(data);
+
+            return dispatch({
+                type: 'GET_PHONE_DETAIL',
+                payload: data
+            })
         } catch (error) {
             console.log(error.message)
         }
     }
 }
+const deleteCache= ()=>{
+    return function(dispatch){
+        return dispatch({
+            type: 'DELETE_CACHE',
+        })
+    }
+}
 export {
     getBrands,
     searchByBrand,
-    getPhoneDetail
+    getPhoneDetail,
+    deleteCache
 
 }

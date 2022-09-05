@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contenedor-phone{
+    max-width: 1200px;
+    margin: 0 auto;
+    .titulo-phone{
+        text-align: center;
+        
+    }
+    .detalles-phone{
+        display: flex;
+        gap: 2rem;
+    }
+}

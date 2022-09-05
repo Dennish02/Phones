@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { searchByBrand } from '../redux/action';
+import { deleteCache, searchByBrand } from '../redux/action';
 
 export default function Navbar({ names, setName }) {
     const dispatch = useDispatch();
@@ -8,14 +8,14 @@ export default function Navbar({ names, setName }) {
         const eso = e.value; 
         const data = eso.split('-')[0] 
         const titulo = data.charAt(0).toUpperCase() + data.slice(1)
-        setName(titulo)
+        
+        dispatch(deleteCache())
         dispatch(searchByBrand(e.value))
+        setName(titulo)
     }
 
     return (
         <nav className='navbar'>
-
-       
                 <div>
                     <p className='logo'>SP</p>
                 </div>
