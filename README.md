@@ -7,7 +7,7 @@ el Front-End esta desarrollado en ReactJs, Redux, Gulp, Sass y el Back-End hecho
 
 ## Getting Started
 
-Primero, instalar el package.json:
+Primero, instalar el package.json en ambas carpetas, front end y backend
 
 ```
 bash
